@@ -23,9 +23,10 @@ public class GaspargApplication extends Application {
 		stage.setMinHeight(600);
 		stage.setTitle("Gasparg I: Codeur Storie"); // la faute d'ortographe est faite exprès
 		stage.setResizable(true);
-		stage.setRenderScaleX(1.1); // test
 		Canvas canvas = new Canvas();
 		GaspargGraphics.canvas = canvas;
+		GaspargGraphics.canvas.setWidth(800);
+		GaspargGraphics.canvas.setHeight(600);
 		pane.setCenter(canvas);
 		stage.show();
 		
@@ -38,7 +39,14 @@ public class GaspargApplication extends Application {
 			
 		};
 		Thread th = new Thread(gameLoop);
+		th.setDaemon(true);
 		th.start();
+		stage.widthProperty().addListener((val, o, n) -> {
+			GaspargGraphics.canvas.setScaleX(800 / n.doubleValue());
+		});
+		stage.heightProperty().addListener((val, o, n) -> {
+			GaspargGraphics.canvas.setScaleX(800 / n.doubleValue());
+		});
 	}
 
 }
