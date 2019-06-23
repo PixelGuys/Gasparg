@@ -42,10 +42,10 @@ public class GaspargApplication extends Application {
 		th.setDaemon(true);
 		th.start();
 		stage.widthProperty().addListener((val, o, n) -> {
-			GaspargGraphics.canvas.setScaleX(800 / n.doubleValue());
+			GaspargGraphics.canvas.setScaleX(n.doubleValue() / 800);
 		});
 		stage.heightProperty().addListener((val, o, n) -> {
-			GaspargGraphics.canvas.setScaleX(800 / n.doubleValue());
+			GaspargGraphics.canvas.setScaleY(n.doubleValue() / 600);
 		});
 	}
 
