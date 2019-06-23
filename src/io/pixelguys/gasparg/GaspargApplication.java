@@ -41,6 +41,8 @@ public class GaspargApplication extends Application {
 		Thread th = new Thread(gameLoop);
 		th.setDaemon(true);
 		th.start();
+		
+		// Permet d'adapter le canevas à la taille de la fenêtre
 		stage.widthProperty().addListener((val, o, n) -> {
 			GaspargGraphics.canvas.setScaleX(n.doubleValue() / 800);
 		});

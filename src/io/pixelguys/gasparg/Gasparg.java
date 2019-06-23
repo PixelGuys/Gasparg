@@ -36,7 +36,8 @@ public class Gasparg {
 		ctx.setFill(Color.BLACK);
 		ctx.fillRect(0, 0, 800, 600);
 		ctx.setFill(Color.WHITE);
-		ctx.fillRect(100, 100, 100, 100);
+		ctx.fillRect(0, 0, 100, 100);
+		ctx.fillRect(700, 500, 100, 100);
 	}
 	
 }
