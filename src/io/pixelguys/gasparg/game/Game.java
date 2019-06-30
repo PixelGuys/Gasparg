@@ -8,10 +8,6 @@ public class Game {
 	
 	public void process(String msg) {
 		String[] mots = msg.split(" ");
-		if (mots.length < 1) {
-			Main.endPoint.write("?");
-			return;
-		}
 		String verbe = mots[0];
 		if (verbe.equals("explorer")) {
 			String mot = mots[1];
@@ -21,8 +17,11 @@ public class Game {
 				Main.endPoint.write("Mot invalide " + mot);
 			}
 		}
-		if (verbe.equals("voir") || verbe.equals("regarder")) {
+		else if (verbe.equals("voir") || verbe.equals("regarder")) {
 			
+		}
+		else {
+			Main.endPoint.write("?");
 		}
 	}
 	
