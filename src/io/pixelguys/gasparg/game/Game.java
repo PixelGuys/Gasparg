@@ -43,6 +43,11 @@ public class Game {
 			String mot = mots[1];
 			Endroit endroit = endroits.get(player.location);
 			
+			if (mot.equals("lieu")) {
+				Main.endPoint.write("Lieu: " + endroit.getName());
+				return;
+			}
+			
 			if (endroit.hasObject(mot)) {
 				if (endroit.getObjectText(mot) != null) {
 					Main.endPoint.write(endroit.getObjectText(mot));
