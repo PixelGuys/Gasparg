@@ -31,7 +31,11 @@ public class Game {
 			}
 			String mot = mots[1];
 			if (mot.equals("ordinateur")) {
-				
+				if (player.location.equals("chambre de la maison")) {
+					Main.endPoint.write("Je vois des fenêtres de code: Eclipse, GitHub Desktop, Sublime Text, Notepad++\n"
+							+ "J'étais entrain de coder une IA qui allait révolutionner le monde, car elle peut penser!\n"
+							+ "Je la présenterais le jour venu...");
+				}
 			} else {
 				Main.endPoint.write("Mot invalide " + mot);
 			}
