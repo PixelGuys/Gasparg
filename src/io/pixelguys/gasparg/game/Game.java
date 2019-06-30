@@ -21,7 +21,7 @@ public class Game {
 			if (mot.equals("cave")) {
 				
 			} else {
-				Main.endPoint.write("Mot invalide " + mot);
+				Main.endPoint.write("Y'a " + mot);
 			}
 		}
 		else if (verbe.equals("voir") || verbe.equals("regarder")) {
