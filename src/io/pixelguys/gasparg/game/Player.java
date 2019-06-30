@@ -2,6 +2,6 @@ package io.pixelguys.gasparg.game;
 
 public class Player {
 
-	public String location = "ma chambre";
+	public String location = "chambre_maison";
 
 }
