@@ -16,6 +16,11 @@ public class Main {
 		}
 		
 		game = new Game();
+		
+		while (true) {
+			String read = endPoint.read();
+			game.process(read);
+		}
 	}
 
 }
