@@ -8,6 +8,9 @@ public class Game {
 	
 	public void process(String msg) {
 		String[] mots = msg.split(" ");
+		for (int i = 0; i < mots.length; i++) {
+			mots[i] = mots[i].toLowerCase();
+		}
 		String verbe = mots[0];
 		if (verbe.equals("explorer")) {
 			if (mots.length < 2) {
