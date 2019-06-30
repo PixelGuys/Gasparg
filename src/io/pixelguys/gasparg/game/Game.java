@@ -4,7 +4,7 @@ import io.pixelguys.gasparg.Main;
 
 public class Game {
 
-	public Player player;
+	public Player player = new Player();
 	
 	public void process(String msg) {
 		String[] mots = msg.split(" ");
@@ -37,7 +37,7 @@ public class Game {
 							+ "Je la présenterais le jour venu...");
 				}
 			} else {
-				Main.endPoint.write("Mot invalide " + mot);
+				Main.endPoint.write("Il n'y a pas de " + mot);
 			}
 		}
 		else {
