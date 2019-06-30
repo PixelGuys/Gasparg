@@ -10,6 +10,10 @@ public class Game {
 		String[] mots = msg.split(" ");
 		String verbe = mots[0];
 		if (verbe.equals("explorer")) {
+			if (mots.length < 2) {
+				Main.endPoint.write("Explorer quoi?");
+				return;
+			}
 			String mot = mots[1];
 			if (mot.equals("cave")) {
 				
@@ -18,7 +22,10 @@ public class Game {
 			}
 		}
 		else if (verbe.equals("voir") || verbe.equals("regarder")) {
-			
+			if (mots.length < 2) {
+				Main.endPoint.write("Regarder quoi?");
+				return;
+			}
 		}
 		else {
 			Main.endPoint.write("?");
