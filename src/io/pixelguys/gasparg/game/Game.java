@@ -39,6 +39,7 @@ public class Game {
 				Main.endPoint.write("Regarder quoi ?");
 				return;
 			}
+
 			String mot = mots[1];
 			Endroit endroit = endroits.get(player.location);
 			
