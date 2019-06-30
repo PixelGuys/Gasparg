@@ -29,6 +29,12 @@ public class Game {
 				Main.endPoint.write("Regarder quoi?");
 				return;
 			}
+			String mot = mots[1];
+			if (mot.equals("ordinateur")) {
+				
+			} else {
+				Main.endPoint.write("Mot invalide " + mot);
+			}
 		}
 		else {
 			Main.endPoint.write("?");
