@@ -25,7 +25,7 @@ public class SalonMaison extends Endroit {
 	@Override
 	public String getObjectText(String object) {
 		if (object.equals("photo") || object.equals("photographie")) {
-			return "Sur cette photographie, il y'a mon père, ma mère et moi.. avant que ma mère meurt..";
+			return "Sur cette photographie, il y'a mon père, ma mère et moi.. avant que mon père meurt..";
 		}
 		return null;
 	}

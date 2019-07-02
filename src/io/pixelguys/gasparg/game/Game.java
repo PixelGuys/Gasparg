@@ -46,7 +46,10 @@ public class Game {
 				}
 			}
 			Endroit endroit = endroits.get(player.location);
-			
+			if (endroit.getName().equals(voulu.toString())) {
+				Main.endPoint.write("Je suis déja dans " + voulu.toString() + ".");
+				return;
+			}
 			for (String place : endroit.getPlaces()) {
 				if (place.equals(voulu.toString())) {
 					player.location = getLocationFrom(voulu.toString()).getId();
