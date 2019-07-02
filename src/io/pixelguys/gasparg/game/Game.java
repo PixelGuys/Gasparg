@@ -33,7 +33,7 @@ public class Game {
 			mots[i] = mots[i].toLowerCase();
 		}
 		String verbe = mots[0];
-		if (verbe.equals("explorer")) {
+		if (verbe.equals("explorer") || verbe.equals("aller")) {
 			if (mots.length < 2) {
 				Main.endPoint.write("Explorer quoi ?");
 				return;
