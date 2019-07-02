@@ -50,6 +50,7 @@ public class Game {
 			for (String place : endroit.getPlaces()) {
 				if (place.equals(voulu.toString())) {
 					player.location = getLocationFrom(voulu.toString()).getId();
+					return;
 				}
 			}
 			Main.endPoint.write("Je ne peut pas aller dans " + voulu.toString() + ".");
