@@ -14,7 +14,12 @@ public class ChambreMaison extends Endroit {
 
 	@Override
 	public boolean canGoTo(String place) {
-		return place.equals("salon");
+		return place.equals("le salon de ma maison");
+	}
+	
+	@Override
+	public String[] getPlaces() {
+		return new String[] {"le salon de ma maison"};
 	}
 
 	@Override
@@ -25,6 +30,11 @@ public class ChambreMaison extends Endroit {
 					+ "Je la présenterais le jour venu...";
 		}
 		return null;
+	}
+
+	@Override
+	public String[] getObjects() {
+		return new String[] {"ordinateur"};
 	}
 
 }

@@ -44,7 +44,34 @@ public class Game {
 			Endroit endroit = endroits.get(player.location);
 			
 			if (mot.equals("lieu")) {
-				Main.endPoint.write("Lieu: " + endroit.getName());
+				Main.endPoint.write("Je suis dans " + endroit.getName() + ".");
+				return;
+			}
+			if (mot.equals("sorties")) {
+				StringBuilder sb = new StringBuilder();
+				sb.append("Je peut aller dans ");
+				for (int i = 0; i < endroit.getPlaces().length; i++) {
+					sb.append(endroit.getPlaces()[i]);
+					if (i < endroit.getPlaces().length-1) {
+						sb.append(", ");
+					}
+				}
+				sb.append(".");
+				Main.endPoint.write(sb.toString());
+				return;
+			}
+			if (mot.equals("objets")) {
+				StringBuilder sb = new StringBuilder();
+				sb.append("Il y'a ");
+				for (int i = 0; i < endroit.getObjects().length; i++) {
+					sb.append("un ");
+					sb.append(endroit.getObjects()[i]);
+					if (i < endroit.getObjects().length-1) {
+						sb.append(", ");
+					}
+				}
+				sb.append(".");
+				Main.endPoint.write(sb.toString());
 				return;
 			}
 			
