@@ -37,4 +37,9 @@ public class ChambreMaison extends Endroit {
 		return new String[] {"ordinateur"};
 	}
 
+	@Override
+	public String getId() {
+		return "chambre_maison";
+	}
+
 }

@@ -35,4 +35,9 @@ public class SalonMaison extends Endroit {
 		return new String[] {"photographie"};
 	}
 
+	@Override
+	public String getId() {
+		return "salon_maison";
+	}
+
 }

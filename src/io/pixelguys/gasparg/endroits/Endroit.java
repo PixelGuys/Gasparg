@@ -8,5 +8,6 @@ public abstract class Endroit {
 	public abstract String getObjectText(String object);
 	public abstract String[] getPlaces();
 	public abstract String[] getObjects();
+	public abstract String getId();
 	
 }

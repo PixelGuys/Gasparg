@@ -5,6 +5,7 @@ import java.util.HashMap;
 import io.pixelguys.gasparg.Main;
 import io.pixelguys.gasparg.endroits.ChambreMaison;
 import io.pixelguys.gasparg.endroits.Endroit;
+import io.pixelguys.gasparg.endroits.SalonMaison;
 
 public class Game {
 
@@ -14,6 +15,16 @@ public class Game {
 	
 	static {
 		endroits.put("chambre_maison", new ChambreMaison());
+		endroits.put("salon_maison", new SalonMaison());
+	}
+	
+	public static Endroit getLocationFrom(String title) {
+		for (Endroit endroit : endroits.values()) {
+			if (endroit.getName().equals(title)) {
+				return endroit;
+			}
+		}
+		return null;
 	}
 	
 	public void process(String msg) {
@@ -27,12 +38,21 @@ public class Game {
 				Main.endPoint.write("Explorer quoi ?");
 				return;
 			}
-			String mot = mots[1];
-			if (mot.equals("cave")) {
-				
-			} else {
-				Main.endPoint.write("Y'a " + mot);
+			StringBuilder voulu = new StringBuilder();
+			for (int i = 1; i < mots.length; i++) {
+				voulu.append(mots[i]);
+				if (i < mots.length-1) {
+					voulu.append(" ");
+				}
 			}
+			Endroit endroit = endroits.get(player.location);
+			
+			for (String place : endroit.getPlaces()) {
+				if (place.equals(voulu.toString())) {
+					player.location = getLocationFrom(voulu.toString()).getId();
+				}
+			}
+			Main.endPoint.write("Je ne peut pas aller dans " + voulu.toString() + ".");
 		}
 		else if (verbe.equals("voir") || verbe.equals("regarder")) {
 			if (mots.length < 2) {
