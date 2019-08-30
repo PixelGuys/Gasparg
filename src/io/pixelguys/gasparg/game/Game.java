@@ -5,6 +5,7 @@ import java.util.HashMap;
 import io.pixelguys.gasparg.Main;
 import io.pixelguys.gasparg.endroits.ChambreMaison;
 import io.pixelguys.gasparg.endroits.Endroit;
+import io.pixelguys.gasparg.endroits.QuartierLocal;
 import io.pixelguys.gasparg.endroits.SalonMaison;
 
 public class Game {
@@ -16,6 +17,7 @@ public class Game {
 	static {
 		endroits.put("chambre_maison", new ChambreMaison());
 		endroits.put("salon_maison", new SalonMaison());
+		endroits.put("quartier_local", new QuartierLocal());
 	}
 	
 	public static Endroit getLocationFrom(String title) {

@@ -14,12 +14,12 @@ public class SalonMaison extends Endroit {
 
 	@Override
 	public boolean canGoTo(String place) {
-		return place.equals("chambre") || place.equals("dehors");
+		return place.equals("chambre") || place.equals("mon quartier");
 	}
 	
 	@Override
 	public String[] getPlaces() {
-		return new String[] {"ma chambre", "dehors"};
+		return new String[] {"ma chambre", "mon quartier"};
 	}
 
 	@Override
