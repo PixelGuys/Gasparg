@@ -35,6 +35,11 @@ public class Game {
 			mots[i] = mots[i].toLowerCase();
 		}
 		String verbe = mots[0];
+		if (verbe.equals("aide")) {
+			Main.endPoint.write("Aide:");
+			Main.endPoint.write("aller [endroit]");
+			Main.endPoint.write("voir (lieu, sorties, objets, [objet])");
+		}
 		if (verbe.equals("explorer") || verbe.equals("aller")) {
 			if (mots.length < 2) {
 				Main.endPoint.write("Explorer quoi ?");
